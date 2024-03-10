@@ -1,7 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "terraformtf-bucket" # Replace with your actual S3 bucket name
-    key    = "EKS/terraform.tfstate"
+    bucket = "terraformtf-bucket"
+    key    = "terraform-state/terraform.tfstate"  # Desired path
     region = "ap-south-1"
+    encrypt = true
   }
 }
